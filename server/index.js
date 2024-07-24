@@ -8,7 +8,13 @@ import { Server } from "socket.io"
 dotenv.config()
 const app = express()
 
-app.use(cors())
+const corsConfig = {
+    origin: "*",
+    credential: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
+}
+app.options("", cors(corsConfig))
+app.use(cors(corsConfig))
 app.use(express.json())
 
 app.use("/api/auth", AuthRoutes)
