@@ -6,6 +6,12 @@
             "use": "@vercel/node"
         }
     ],
+    "functions": [
+        {
+            "src": "./index.js",
+            "runtime": "nodejs14.x"
+        }
+    ],
     "routes": [
         {
             "src": "/(.*)",
