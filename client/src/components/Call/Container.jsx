@@ -41,7 +41,7 @@ function Container({ data }) {
   useEffect(() => {
     const startCall = async () => {
       import("zego-express-engine-webrtc").then(async({ZegoExpressEngine}) => {
-        const zg = new ZegoExpressEngine(process.env.NEXT_PUBLIC_ZEGO_APP_ID, process.env.NEXT_PUBLIC_ZEGO_SERVER_ID)
+        const zg = new ZegoExpressEngine(1683479883, "88c7e1df1324128d4dd7e328ecb2d07e")
         setZgVar(zg)
 
         zg.on("roomStreamUpdate", async(roomId, updateType, streamList, extendedData) => {
