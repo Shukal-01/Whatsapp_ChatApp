@@ -6,9 +6,24 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/",
-        "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
-    }]
+    "functions": [
+        {
+            "src": "./index.js",
+            "runtime": "nodejs14.x"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "OPTIONS"
+            ]
+        }
+    ]
 }
